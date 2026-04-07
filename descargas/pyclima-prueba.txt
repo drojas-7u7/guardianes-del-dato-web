@@ -1,0 +1,1 @@
+Este es el ejecutable de prueba de PyClima Resiliente. ¡La descarga funciona!

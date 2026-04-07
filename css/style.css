@@ -1,0 +1,166 @@
+/* =========================================
+   VARIABLES CORPORATIVAS
+   ========================================= */
+:root {
+    --bg-oscuro: #0B1A2A;      /* Azul profundo (fondo) */
+    --texto-claro: #E2E8F0;    /* Gris muy claro (legibilidad) */
+    --cian-tech: #00E5FF;      /* Acentos y titulares principales */
+    --verde-eco: #2ECC71;      /* Destacados y validaciones */
+    --borde-tarjeta: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   RESETEO Y BASE
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-oscuro);
+    color: var(--texto-claro);
+    line-height: 1.6;
+}
+
+/* =========================================
+   CABECERA Y NAVEGACIÓN
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #07121D; /* Color sólido aún más oscuro que el fondo para dar contraste */
+    border-bottom: 2px solid var(--cian-tech);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que la cabecera pase por encima de todo al hacer scroll */
+}
+
+/* Control de las 3 columnas de la cabecera */
+.header-logo {
+    flex: 1; /* Ocupa el espacio izquierdo */
+    display: flex;
+}
+
+.header-centro {
+    flex: 2; /* Ocupa el doble de espacio en el centro */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-nav {
+    flex: 1; /* Ocupa el espacio derecho */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilos de la marca central */
+.marca-titulo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--texto-claro);
+}
+
+.marca-lema {
+    font-size: 0.85rem;
+    color: var(--verde-eco);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-claro);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cian-tech);
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL Y SECCIONES
+   ========================================= */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h1, h2, h3 {
+    color: var(--cian-tech);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    border-left: 5px solid var(--verde-eco);
+    padding-left: 15px;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--borde-tarjeta);
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   TARJETAS DE PROYECTOS (ARTICLES)
+   ========================================= */
+article {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--borde-tarjeta);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde-eco);
+}
+
+article h3 {
+    color: var(--texto-claro);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid var(--borde-tarjeta);
+    margin-top: auto;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    border: none;
+}
